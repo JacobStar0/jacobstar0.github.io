@@ -46,3 +46,9 @@
   .role{font-size:13px}
 }
 .not-found{min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px}.not-found-card{width:min(100%,620px);padding:55px 30px;border:1px solid rgba(91,139,255,.62);border-radius:18px;background:radial-gradient(circle at 80% 20%,rgba(118,47,237,.3),transparent 35%),rgba(7,20,48,.92);box-shadow:0 25px 80px rgba(0,0,0,.45)}.not-found-card strong{display:block;font-size:88px;line-height:1;background:linear-gradient(90deg,#54b8ff,#9a63ff);background-clip:text;-webkit-background-clip:text;color:transparent}.not-found-card h1{font-size:30px;margin:18px 0 10px}.not-found-card p{color:#aeb8d0;margin:0 0 25px}.home-button{display:inline-flex;padding:13px 22px;border:1px solid #7d70ff;border-radius:11px;color:#fff;text-decoration:none;background:linear-gradient(105deg,rgba(42,76,185,.62),rgba(105,37,198,.65))}
+
+/* Keep unpublished fallback content invisible while Modrinth is loading. */
+.featured.is-loading{pointer-events:none}
+.featured.is-loading>:not(.project-loading){visibility:hidden}
+.project-loading{position:absolute;z-index:4;inset:0;display:grid;place-items:center;color:#8fa1c5;font-size:14px;letter-spacing:.02em}
+.featured:not(.is-loading) .project-loading{display:none}
