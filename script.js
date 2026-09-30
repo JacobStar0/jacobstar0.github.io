@@ -27,6 +27,7 @@ async function loadLatestProject() {
       : "profile.png";
     document.querySelector("#project-icon").src = safeIcon;
     document.querySelector("#project-icon").alt = `${latest.title.slice(0, 80)} icon`;
+    document.querySelector(".project-loading")?.remove();
     card.classList.remove("is-loading");
     card.removeAttribute("aria-busy");
     card.removeAttribute("aria-disabled");
